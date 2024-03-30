@@ -1,0 +1,600 @@
+@font-face {
+    font-family: Signika;
+    src: url("../font/Signika/static/Signika-Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Signika;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #8296c4;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+/* Start of Nav Section */
+
+#nav {
+    /* border: 2px solid red; */
+    width: 100%;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+#nav.bg {
+    background-color: rgba(254, 202, 114, 1);
+}
+
+#nav a {
+    color: #fff;
+}
+
+#nav > .container {
+    /* border: 2px solid blue; */
+    max-width: 1200px;
+    min-height: 60px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav .navbar-brand a {
+    text-decoration: none;
+}
+
+#nav .mobile-navbar-icon,
+#nav #hamburger {
+    display: none;
+}
+
+#nav .navbar-menu,
+#nav .navbar-icon {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+}
+
+#nav .navbar-menu li,
+#nav .navbar-icon li {
+    padding: 0 20px;
+}
+
+#nav .navbar-icon input {
+    width: 65px;
+    /* border: 1px solid gray; */
+
+    border-right: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+    padding: 5px 3px;
+
+    transition: 0.5s;
+}
+
+#nav .navbar-icon button {
+    width: 30px;
+    color: #fff;
+    background-color: rgba(22, 22, 63, 0.9);
+    /* border: 1px solid gray; */
+
+    border-left: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#nav .navbar-menu li a,
+#nav .navbar-icon li a {
+    text-decoration: none;
+}
+
+/* End of Nav Section */
+
+/* Start of Slider Image Section */
+
+#slider {
+    /* border: 2px solid red; */
+}
+
+#slider > .container {
+    /* border: 2px solid blue; */
+    position: relative;
+}
+
+#slider img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    object-position: 100% 70%;
+}
+
+#slider .prev,
+#slider .next {
+    position: absolute;
+    top: 50%;
+    width: 55px;
+    height: 30px;
+    color: #f4f4f4;
+
+    background-color: rgb(254, 202, 114);
+    border: none;
+    border-radius: 4px;
+}
+
+#slider .prev {
+    left: 5px;
+}
+
+#slider .next {
+    right: 5px;
+}
+
+#slider_img {
+    transition: opacity 0.5s ease;
+}
+
+/* End of Slider Image Section */
+
+/* Start of New Arrival Section */
+
+/* !!!!!NOTE : Most of the Popular Products Section codes are written here as they are the same with New Arrival.!!!!! */
+
+.products {
+    /* border: 2px solid red; */
+    padding: 50px 0;
+}
+
+.products .container {
+    /* border: 2px solid blue; */
+    max-width: 992px;
+    margin: auto;
+}
+
+.products .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.products .cards .card {
+    /* border: 1px solid black; */
+    flex-basis: 24%;
+    border-radius: 4px;
+    margin: 4px;
+    position: relative;
+    background-color: rgba(73, 86, 112, 0.5);
+}
+
+.products .cards .card:hover {
+    /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); */
+}
+
+.products .cards img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 4px 4px 0 0;
+
+    transition: 0.5s ease;
+}
+
+.products .cards .card:hover img {
+    transform: scale(0.95);
+}
+
+.products .cards .card .content {
+    padding: 5px 0;
+}
+
+.products .cards .rating i {
+    color: #fde6a3;
+}
+
+.products .cards .actions {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 15%;
+    right: 10px;
+
+    height: 0px;
+    overflow: hidden;
+
+    transition: 0.5s ease-in-out;
+}
+
+.products .cards .actions span {
+    margin: 8px 0;
+    width: 35px;
+    height: 35px;
+
+    color: #fff;
+    background-color: #feca72;
+
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+}
+
+.products .cards .actions a {
+    color: #fff;
+}
+
+.products .cards .card:hover .actions {
+    height: 160px;
+}
+
+/* End of New Arrival Section */
+
+/* Start of Collection Section */
+
+#collection {
+    /* border: 2px solid red; */
+    padding: 25px 0;
+}
+
+#collection > .container {
+    /* border: 2px solid blue; */
+
+    max-width: 992px;
+    margin: auto;
+
+    display: flex;
+}
+
+#collection > .container .right,
+#collection > .container .left {
+    flex-basis: 50%;
+    position: relative;
+}
+
+#collection > .container .right img {
+    width: 100%;
+    max-height: 320px;
+
+    object-fit: cover;
+}
+
+#collection > .container .right .card {
+    position: relative;
+}
+
+#collection > .container .left img {
+    width: 100%;
+
+    object-fit: cover;
+}
+
+#collection > .container .left .content,
+#collection > .container .right .content {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(73, 86, 112, 0.5);
+    color: #f4f4f4;
+    padding: 5px 10px;
+}
+
+/* End of Collection Section */
+
+/* Start of Popular Products Section */
+
+.filterable-btns {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.filterable-btns button {
+    margin: 0 3px;
+    padding: 5px 10px;
+
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 4px;
+}
+
+.filterable-btns button.active {
+    background-color: rgb(254, 202, 114);
+}
+
+/* End of Popular Products Section */
+
+/* Start of Fashion Blogs Section */
+
+#blog {
+    /* border: 2px solid orange; */
+    padding: 50px 0;
+}
+
+#blog > .container {
+    /* border: 2px solid red; */
+    max-width: 992px;
+    margin: auto;
+}
+
+#blog .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#blog .cards .card {
+    flex-basis: 32%;
+    margin: 4px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+#blog .card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 4px 4px 0 0;
+    object-fit: cover;
+    object-position: 100% 50%;
+}
+
+#blog .card .content {
+    font-size: 14px;
+    position: relative;
+    padding: 20px 5px;
+}
+
+#blog .date {
+    color: #fff;
+    background-color: rgb(254, 202, 114);
+
+    display: block;
+    width: 80px;
+    height: 30px;
+
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: -22px;
+    left: 5px;
+}
+
+/* End of Fashion Blogs Section */
+
+/* Start of News Letter Section */
+
+#news-letter {
+    /* border: 2px solid red; */
+    color: #fff;
+    padding: 50px 0;
+
+    background-image: url("../images/photos/news_letter1.png");
+    background-size: cover;
+    background-position: center 20%;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+
+#news-letter > .container {
+    /* border: 2px solid blue; */
+    max-width: 992px;
+    margin: auto;
+}
+
+#news-letter form {
+    display: flex;
+    justify-content: center;
+}
+
+#news-letter form input {
+    flex-basis: 50%;
+    padding: 15px;
+    border: 1px solid #495670;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+#news-letter form button {
+    flex-basis: 10%;
+    padding: 15px;
+    border: 1px solid #495670;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #feca72;
+
+    color: #fff;
+}
+
+/* End of News Letter Section */
+
+/* Start of Footer Section */
+
+#footer {
+    /* border: 2px solid blue; */
+    padding: 50px 0;
+    background-color: rgb(22, 22, 63, 0.9);
+    color: #fff;
+}
+
+#footer > .container {
+    /* border: 2px solid red; */
+    max-width: 992px;
+
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+
+    padding: 0 10px;
+}
+
+#footer ul {
+    list-style-type: none;
+    flex-basis: 30%;
+}
+
+#footer ul li {
+    /* border: 1px solid cyan; */
+    padding: 5px 0;
+}
+
+#footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: rgb(254, 202, 114);
+}
+
+#footer img {
+    width: 50px;
+    height: 30px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+#footer .social-medias {
+    display: flex;
+    align-items: center;
+}
+
+#footer .social-medias a {
+    color: rgb(254, 202, 114);
+    background-color: gray;
+    margin: 0 5px;
+    font-size: 20px;
+
+    width: 30px;
+    height: 30px;
+    text-align: center;
+
+    border: 2px solid rgb(253, 230, 163);
+    border-radius: 4px;
+}
+
+/* End of Footer Section */
+
+/* --------------------------------------------------------------------- */
+
+/* Start of PRODUCT DETAIL Page */
+
+#product-detail {
+    padding: 65px 0;
+}
+
+#product-detail > .container {
+    display: flex;
+    max-width: 992px;
+    margin: auto;
+}
+
+#product-detail .image-div {
+    /* border: 2px solid red; */
+    flex-basis: 50%;
+}
+
+#product-detail .image-div img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+#product-detail .sub-images {
+    display: flex;
+    justify-content: center;
+}
+
+#product-detail .sub-images div {
+    flex-basis: 24%;
+    margin: 3px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+#product-detail .sub-images img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+#product-detail .content {
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+#product-detail .content .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#product-detail .content .inputs {
+    /* width: 60px; */
+    display: flex;
+}
+
+#product-detail .content .inputs input {
+    width: 80px;
+    margin: 4px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#product-detail .content .inputs select {
+    width: 300px;
+    margin: 4px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#product-detail .content button {
+    padding: 8px 0;
+    width: 200px;
+    border-radius: 4px;
+    background-color: rgb(254, 202, 114);
+    border: none;
+    color: #fff;
+    margin: 4px;
+}
+/* End of PRODUCT DETAIL Page */
+
+/* Start of Go Top Button */
+
+#go_top {
+    display: inline-block;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
+    color: rgb(73, 86, 112);
+    background-color: rgb(254, 202, 114);
+    border-radius: 50%;
+
+    width: 45px;
+    height: 50px;
+    font-size: 25px;
+
+    line-height: 50px;
+    text-align: center;
+}
+
+/* End of Go Top Button */
